@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Daj-sy-QwM">
+            <objects>
+                <viewController storyboardIdentifier="popUp" id="Ffh-wu-tiB" customClass="PopUpViewController" customModule="SecondTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WaH-fG-Xl5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrT-ZB-jjN">
+                                <rect key="frame" x="80" y="356" width="254" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6w-Ch-uns">
+                                        <rect key="frame" x="20" y="132" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="1yl-gF-Vuc"/>
+                                        </constraints>
+                                        <state key="normal" title="확인">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnOk:" destination="Ffh-wu-tiB" eventType="touchUpInside" id="2XC-aU-snU"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpX-2u-6Uo">
+                                        <rect key="frame" x="20" y="68" width="214" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트를 입력하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-aw-iUe">
+                                        <rect key="frame" x="58.5" y="17" width="137" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-24-FTv">
+                                        <rect key="frame" x="134" y="132" width="100" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="hfg-9U-c6n"/>
+                                        </constraints>
+                                        <state key="normal" title="취소">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnClose:" destination="Ffh-wu-tiB" eventType="touchUpInside" id="mbV-ne-EVr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kgx-24-FTv" firstAttribute="top" secondItem="fpX-2u-6Uo" secondAttribute="bottom" constant="30" id="0jw-C8-XM4"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="top" secondItem="hrT-ZB-jjN" secondAttribute="top" constant="68" id="5M1-Rf-Veo"/>
+                                    <constraint firstItem="bzi-aw-iUe" firstAttribute="centerX" secondItem="hrT-ZB-jjN" secondAttribute="centerX" id="OUa-Mx-QoK"/>
+                                    <constraint firstItem="G6w-Ch-uns" firstAttribute="top" secondItem="fpX-2u-6Uo" secondAttribute="bottom" constant="30" id="hmm-8z-PM4"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="leading" secondItem="G6w-Ch-uns" secondAttribute="leading" id="mEj-Sc-TD2"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="top" secondItem="bzi-aw-iUe" secondAttribute="bottom" constant="30" id="pY0-Ir-Dlf"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="leading" secondItem="hrT-ZB-jjN" secondAttribute="leading" constant="20" id="uHZ-K3-csC"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="trailing" secondItem="kgx-24-FTv" secondAttribute="trailing" id="xOR-kK-FUq"/>
+                                    <constraint firstItem="fpX-2u-6Uo" firstAttribute="centerX" secondItem="bzi-aw-iUe" secondAttribute="centerX" id="yay-lH-UK8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U3p-TZ-bbt"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hrT-ZB-jjN" firstAttribute="centerX" secondItem="WaH-fG-Xl5" secondAttribute="centerX" id="3OE-QL-hkS"/>
+                            <constraint firstItem="hrT-ZB-jjN" firstAttribute="leading" secondItem="U3p-TZ-bbt" secondAttribute="leading" constant="80" id="L8Z-TE-TGg"/>
+                            <constraint firstItem="hrT-ZB-jjN" firstAttribute="top" secondItem="U3p-TZ-bbt" secondAttribute="top" constant="312" id="LHU-Tf-6HV"/>
+                            <constraint firstItem="hrT-ZB-jjN" firstAttribute="centerY" secondItem="WaH-fG-Xl5" secondAttribute="centerY" id="kgd-Dr-S8N"/>
+                            <constraint firstItem="U3p-TZ-bbt" firstAttribute="trailing" secondItem="hrT-ZB-jjN" secondAttribute="trailing" constant="80" id="ouv-gN-r7S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtText" destination="fpX-2u-6Uo" id="hdK-4p-Leq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPc-oi-inM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
