@@ -34,7 +34,7 @@ class PopUpViewController: UIViewController {
         
         // 클래스 바깥에서 선언했기 때문에 바로 접근 가능
         if seq.count == 0 {
-            seq.append(0)
+            seq.append(1)
             text.append(txtText.text!)
             time.append(formatter.string(from: date as Date))
         } else {

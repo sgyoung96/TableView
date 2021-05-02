@@ -7,12 +7,6 @@
 
 import UIKit
 
-// 모든 클래스에서 접근 가능하도록 클래스 바깥쪽에 선언
-var seq: [Int] = []
-var text: [String] = []
-var time: [String] = []
-var arr: [Int] = []
-
 class ViewController: UITableViewController {
     
     // 테이블 뷰
